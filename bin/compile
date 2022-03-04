@@ -37,10 +37,10 @@ fi
             echo "Lifting dependency ${DEPENDENCY} from '${BUILD_DIR}/${DEPENDENCY}' to '${TARGET}'." | indent | indent
             mv -v "${BUILD_DIR}/${DEPENDENCY}" "${TARGET}"
         done
-    fi &&
+    fi 
 
-    rm -rf "${BUILD_DIR}"/* &&
-    mv "${STAGE}/$(basename "$APP_BASE")"/* "${BUILD_DIR}"
+    # rm -rf "${BUILD_DIR}"/* &&
+    # mv "${STAGE}/$(basename "$APP_BASE")"/* "${BUILD_DIR}"
     
 )
 
